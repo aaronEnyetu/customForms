@@ -1,5 +1,9 @@
 import { render, screen } from '@testing-library/react';
-import { InputControl, TextAreaControl } from './FormControls.jsx';
+import {
+  InputControl,
+  TextAreaControl,
+  SelectControl,
+} from './FormControls.jsx';
 
 test('Input Control', async () => {
   render(
@@ -30,4 +34,19 @@ test('TextArea Control', async () => {
   expect(textAreaControl.name).toBe('bio');
   expect(textAreaControl.required).toBe(true);
   expect(textAreaControl.placeholder).toBe('about you');
+});
+
+test('Select Control', async () => {
+  render(
+    <SelectControl label="Animal" name="animal" required>
+      <option>Cat</option>
+      <option>Dog</option>
+      <option>Bird</option>
+    </SelectControl>
+  );
+
+  const selectControl = screen.getByLabelText('Animal');
+  expect(selectControl.name).toBe('animal');
+  expect(selectControl.required).toBe(true);
+  expect(selectControl.options.length).toBe(3);
 });

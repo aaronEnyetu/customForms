@@ -1,6 +1,7 @@
 import {
   InputControl,
   TextAreaControl,
+  SelectControl,
 } from '../Forms/FormControls.jsx';
 import styles from './Dashboard.css';
 
@@ -27,6 +28,16 @@ export default function Dashboard() {
           name="bio"
           placeholder="tell us about yourself"
         />
+        <SelectControl
+          label="Letter"
+          required
+          name="letter"
+          placeholder="select a letter"
+        >
+          <option value="1">A</option>
+          <option value="2">B</option>
+          <option value="3">C</option>
+        </SelectControl>
       </form>
     </div>
   );
