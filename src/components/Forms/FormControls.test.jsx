@@ -38,15 +38,31 @@ test('TextArea Control', async () => {
 
 test('Select Control', async () => {
   render(
-    <SelectControl label="Animal" name="animal" required>
-      <option>Cat</option>
-      <option>Dog</option>
-      <option>Bird</option>
+    <SelectControl label="Plant" name="plant" required>
+      <option>Bamboo</option>
+      <option>Cactus</option>
+      <option>Orchid</option>
     </SelectControl>
   );
 
-  const selectControl = screen.getByLabelText('Animal');
-  expect(selectControl.name).toBe('animal');
+  const selectControl = screen.getByLabelText('Plant');
+  expect(selectControl.name).toBe('plant');
   expect(selectControl.required).toBe(true);
   expect(selectControl.options.length).toBe(3);
+});
+
+test('Select Control with placeholder', async () => {
+  render(
+    <SelectControl label="Plant" placeholder="choose a plant">
+      <option>Bamboo</option>
+      <option>Cactus</option>
+      <option>Orchid</option>
+    </SelectControl>
+  );
+
+  const selectControl = screen.getByLabelText('Plant');
+  expect(selectControl.options.length).toBe(4);
+  const placeHolderOption = selectControl.options[0];
+  expect(placeHolderOption.textContent).toBe('choose a plant');
+  expect(placeHolderOption.disabled).toBe(true);
 });

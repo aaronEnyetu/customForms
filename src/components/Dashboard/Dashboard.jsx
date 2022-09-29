@@ -29,14 +29,14 @@ export default function Dashboard() {
           placeholder="tell us about yourself"
         />
         <SelectControl
-          label="Letter"
+          label="Plant"
           required
-          name="letter"
-          placeholder="select a letter"
+          name="plant"
+          placeholder="select a plant"
         >
-          <option value="1">A</option>
-          <option value="2">B</option>
-          <option value="3">C</option>
+          <option value="1">Bamboo</option>
+          <option value="2">Cactus</option>
+          <option value="3">Orchid</option>
         </SelectControl>
       </form>
     </div>

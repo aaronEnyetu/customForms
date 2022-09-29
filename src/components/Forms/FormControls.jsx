@@ -36,9 +36,25 @@ export function SelectControl({
   return (
     <FormControl label={label}>
       <select {...rest}>
-        {placeholder && <option disabled>{placeholder}</option>}
+        {placeholder && (
+          <option selected disabled>
+            {placeholder}
+          </option>
+        )}
         {children}
       </select>
     </FormControl>
+  );
+}
+
+export function CheckboxControl({ legend, label, ...rest }) {
+  return (
+    <fieldset className={styles.CheckboxControl}>
+      <legend className={styles.LabelText}>{legend}</legend>
+      <label>
+        <input type="checkbox" {...rest} />
+        {label}
+      </label>
+    </fieldset>
   );
 }

@@ -1,9 +1,13 @@
-.Dashboard {
-    form {
+  .Dashboard form {
       background: var(--light-accent-color);
       display: grid;
       gap: 10px;
       padding: 20px;
       width: 400px;
     }
+    .placeholder,
+  select:invalid,
+  input:invalid {
+    color: rgb(151, 151, 151);
   }
+
