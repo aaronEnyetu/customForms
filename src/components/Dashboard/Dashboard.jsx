@@ -2,6 +2,7 @@ import {
   InputControl,
   TextAreaControl,
   SelectControl,
+  CheckboxControl,
 } from '../Forms/FormControls.jsx';
 import styles from './Dashboard.css';
 
@@ -38,6 +39,8 @@ export default function Dashboard() {
           <option value="2">Cactus</option>
           <option value="3">Orchid</option>
         </SelectControl>
+
+        <CheckboxControl legend="Do you agree?" label="Yes" />
       </form>
     </div>
   );

@@ -3,6 +3,7 @@ import {
   InputControl,
   TextAreaControl,
   SelectControl,
+  CheckboxControl,
 } from './FormControls.jsx';
 
 test('Input Control', async () => {
@@ -65,4 +66,20 @@ test('Select Control with placeholder', async () => {
   const placeHolderOption = selectControl.options[0];
   expect(placeHolderOption.textContent).toBe('choose a plant');
   expect(placeHolderOption.disabled).toBe(true);
+});
+
+test('Checkbox Control', async () => {
+  render(
+    <CheckboxControl
+      legend="Do you accept?"
+      label="Yes"
+      name="accept"
+      required
+    />
+  );
+
+  const legend = screen.getByText('Do you accept?');
+  expect(legend).not.toBeNull();
+  const checkboxControl = screen.getByLabelText('Yes');
+  expect(checkboxControl.required).toBe(true);
 });
