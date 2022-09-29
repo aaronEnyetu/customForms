@@ -3,6 +3,7 @@ import {
   TextAreaControl,
   SelectControl,
   CheckboxControl,
+  FormButton,
 } from '../Forms/FormControls.jsx';
 import styles from './Dashboard.css';
 
@@ -41,6 +42,8 @@ export default function Dashboard() {
         </SelectControl>
 
         <CheckboxControl legend="Do you agree?" label="Yes" />
+
+        <FormButton text="Submit" />
       </form>
     </div>
   );
