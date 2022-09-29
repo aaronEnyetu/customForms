@@ -1,4 +1,7 @@
-import { InputControl } from '../Forms/FormControls.jsx';
+import {
+  InputControl,
+  TextAreaControl,
+} from '../Forms/FormControls.jsx';
 import styles from './Dashboard.css';
 
 export default function Dashboard() {
@@ -17,6 +20,12 @@ export default function Dashboard() {
           type="date"
           name="date"
           placeholder="pick a date"
+        />
+
+        <TextAreaControl
+          label="Bio"
+          name="bio"
+          placeholder="tell us about yourself"
         />
       </form>
     </div>
