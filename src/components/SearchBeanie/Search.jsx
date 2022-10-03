@@ -1,29 +1,30 @@
 import SearchForm from './SearchForm.jsx';
 import SearchResults from './SearchResults.jsx';
-import useSearchResults from '../../hooks/use-search-results.js';
-import { FormButton } from '../Forms/FormControls.jsx';
+import useSearchResults from '../../hooks/search-results.js';
+import { FormButton } from '../forms/FormControls.jsx';
 
 export default function Search() {
   const {
     infiniteScrollRef,
     nextPage,
-    pokemon,
-    setPokemon,
+    beanies,
+    setBeanies,
     searchResults,
-    searchPokedex,
+    searchBeanies,
   } = useSearchResults();
+
   return (
     <section>
       <SearchForm
-        pokemon={pokemon}
-        setPokemon={setPokemon}
-        onSubmit={searchPokedex}
+        beanies={beanies}
+        setBeanies={setBeanies}
+        onSubmit={searchBeanies}
       />
       <SearchResults
         results={searchResults}
         infiniteScrollRef={infiniteScrollRef}
       />
-      <FormButton onClick={nextPage}>More</FormButton>
+      <FormButton onClick={nextPage}>More Beanies</FormButton>
     </section>
   );
 }
