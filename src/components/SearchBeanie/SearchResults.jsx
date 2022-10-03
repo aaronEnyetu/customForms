@@ -5,6 +5,7 @@ export default function SearchResults({
   results,
   infiniteScrollRef,
 }) {
+  console.log('Results', results);
   return (
     <ul>
       {results.map((result, i) => {

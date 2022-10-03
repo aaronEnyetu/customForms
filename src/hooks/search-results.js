@@ -33,9 +33,9 @@ export default function useSearchResults() {
 
     try {
       const body = await search(searchObj);
-      setSearchResults(body.results);
-    } catch (e) {
-      setError(`Error searching beanies: ${e.body.toString()}`);
+      setSearchResults(body);
+    } catch (error) {
+      setError(`Error searching beanies: ${error.body}`);
       throw error;
     }
   };

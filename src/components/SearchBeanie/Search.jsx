@@ -24,7 +24,7 @@ export default function Search() {
         results={searchResults}
         infiniteScrollRef={infiniteScrollRef}
       />
-      <FormButton onClick={nextPage}>More Beanies</FormButton>
+      <FormButton onClick={nextPage}>More</FormButton>
     </section>
   );
 }
