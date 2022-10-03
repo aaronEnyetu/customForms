@@ -7,7 +7,6 @@ import {
 
 import Layout from './components/PageLayouts/Layout';
 import Dashboard from './components/Dashboard/Dashboard';
-import Search from './components/Search/Search.jsx';
 import SearchBeanie from './components/SearchBeanie/Search.jsx';
 
 export default function App() {
@@ -16,7 +15,6 @@ export default function App() {
       <Routes>
         <Route element={<Layout />}>
           <Route index element={<Dashboard />} />
-          <Route path="search" element={<Search />} />
           <Route path="searchBeanie" element={<SearchBeanie />} />
         </Route>
 

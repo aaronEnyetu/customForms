@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
-import { InputControl, FormButton } from '../forms/FormControls';
+import { InputControl, FormButton } from '../Forms/FormControls';
 import useSearchForm from '../../hooks/search-form';
 
 export default function SearchForm({ onSubmit }) {

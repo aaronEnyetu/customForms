@@ -41,10 +41,10 @@ export default function Dashboard() {
           onChange={handleChange}
         />
         <SelectControl
-          label="Letter"
+          label="plant"
           required
-          name="letter"
-          placeholder="select a letter"
+          name="plant"
+          placeholder="select a plant"
           value={data.letter || ''}
           onChange={handleChange}
         >

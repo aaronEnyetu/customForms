@@ -1,7 +1,7 @@
 import SearchForm from './SearchForm.jsx';
 import SearchResults from './SearchResults.jsx';
 import useSearchResults from '../../hooks/search-results.js';
-import { FormButton } from '../forms/FormControls.jsx';
+import { FormButton } from '../Forms/FormControls.jsx';
 
 export default function Search() {
   const {
