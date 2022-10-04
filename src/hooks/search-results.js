@@ -15,7 +15,7 @@ export default function useSearchResults() {
     useableSearchParams.page = parseInt(useableSearchParams.page) + 1;
     setSearchParams(useableSearchParams);
     const moreResults = await search(useableSearchParams);
-    setSearchResults(searchResults.concat(moreResults.results));
+    setSearchResults(searchResults.concat(moreResults));
   };
 
   const infiniteScrollRef = useInView({
@@ -32,8 +32,8 @@ export default function useSearchResults() {
     setSearchParams(searchObj);
 
     try {
-      const body = await search(searchObj);
-      setSearchResults(body);
+      const newSearchResults = await search(searchObj);
+      setSearchResults(newSearchResults);
     } catch (error) {
       setError(`Error searching beanies: ${error.body}`);
       throw error;

@@ -2,6 +2,7 @@ import { client } from './client';
 
 export const search = async (searchObj) => {
   const query = searchObj.title;
+  const perPage = 25;
   //   const query = Array.from(Object.entries(searchObj))
   //     .map(([k, v]) => `${k}=${encodeURIComponent(v)}`)
   //     .join('&');
@@ -12,7 +13,8 @@ export const search = async (searchObj) => {
     .textSearch('title', query, {
       type: 'plain',
       config: 'english',
-    });
+    })
+    .range((searchObj.page - 1) * perPage, searchObj.page * perPage);
   if (res.status >= 400) {
     throw res;
   } else {
