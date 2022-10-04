@@ -5,7 +5,7 @@ export default function SearchResultCard({
 }) {
   return (
     <li ref={infiniteScrollRef}>
-      {beanie.image}
+      {beanie.title}
       {beanie.animal}
     </li>
   );

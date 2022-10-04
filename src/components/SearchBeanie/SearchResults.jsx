@@ -11,13 +11,14 @@ export default function SearchResults({
       {results.map((result, i) => {
         const ref =
           i == results.length - 3 ? infiniteScrollRef : undefined;
-        return (
-          <SearchResultCard
-            key={result.animal + i}
-            beanie={result}
-            infiniteScrollRef={ref}
-          />
-        );
+        if (result)
+          return (
+            <SearchResultCard
+              key={result.animal + i}
+              beanie={result}
+              infiniteScrollRef={ref}
+            />
+          );
       })}
     </ul>
   );

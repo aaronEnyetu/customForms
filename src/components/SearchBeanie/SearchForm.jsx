@@ -17,7 +17,7 @@ export default function SearchForm({ onSubmit }) {
     <form onSubmit={formSubmit}>
       <InputControl
         type="text"
-        name="animal"
+        name="title"
         value={beanies}
         onChange={(e) => setBeanies(e.target.value)}
       />

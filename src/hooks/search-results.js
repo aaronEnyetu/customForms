@@ -5,7 +5,7 @@ import { search } from '../services/beanie-babies';
 
 export default function useSearchResults() {
   const [searchResults, setSearchResults] = useState([]);
-  const [error, setError] = useState('');
+  const [setError] = useState('');
   const [searchParams, setSearchParams] = useSearchParams();
   const useableSearchParams = Object.fromEntries(
     searchParams.entries()
