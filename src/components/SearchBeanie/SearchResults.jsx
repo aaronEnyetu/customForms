@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-//console.log results
+
 import SearchResultCard from './SearchResultCard';
 
 export default function SearchResults({
