@@ -4,6 +4,7 @@ const path = require('path');
 const HtmlPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
+const Dotenv = require('dotenv-webpack');
 
 const env = Object.entries({
   ...require('dotenv').config(),
@@ -35,7 +36,15 @@ module.exports = {
     new webpack.ProvidePlugin({
       React: 'react',
     }),
+    new Dotenv()
+    // new webpack.DefinePlugin({
+    //   'process.env.SUPABASE_URL': JSON.stringify(process.env.SUPABASE_URL),
+    //   'process.env.SUPABASE_KEY': JSON.stringify(process.env.SUPABASE_KEY),
+    
+    // })
+
   ],
+
   resolve: {
     extensions: ['.js', '.jsx'],
   },
